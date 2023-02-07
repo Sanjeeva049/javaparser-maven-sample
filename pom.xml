@@ -31,10 +31,22 @@
             <version>3.24.9</version>
         </dependency>
     </dependencies>
-
-    <!-- This blob of configuration tells Maven to make the jar executable. You can run it with:
-    mvn clean package
-    java -jar target/javaparser-maven-sample-1.0-SNAPSHOT-shaded.jar
+<distributionManagement>
+	
+	    <repository>
+	      <id>nexus</id>
+	      <name>Mithun Technologies Releases Nexus Repository</name>
+	      <url>http://52.66.252.56:8081/repository/developer-release/</url>
+	    </repository>
+	    
+	    <snapshotRepository>
+	      <id>nexus</id>
+	      <name>Mithun Technologies Snapshot Nexus Repository </name>
+	      <url>http://52.66.252.56:8081/repository/developer-snapshot/</url>
+	    </snapshotRepository>
+	    
+	</distributionManagement>
+   
     -->
     <build>
         <plugins>
